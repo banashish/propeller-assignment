@@ -1,0 +1,24 @@
+
+.main-body {
+    display: flex;
+}
+.left-pane {
+    max-height: 100%;
+}
+.container-class {
+    // max-width: 95%;
+    width: 100%;
+    height: 100%;
+    .header {
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+    .quick-access {
+        margin: 2vh 5vh;
+    }
+    .project-list {
+        margin: 3vh 5vh;
+    }
+}

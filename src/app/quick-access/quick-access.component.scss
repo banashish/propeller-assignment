@@ -1,0 +1,120 @@
+@import "~bootstrap/scss/functions";
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/variables';
+// @import "~bootstrap/scss/bootstrap-grid.scss";
+.quick-access {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    .header {
+        font-weight: bold;
+        font-size: large;
+    }
+    .quick-acces-content{
+        margin-top: 20px;
+        position: relative;
+        // display: flex;
+        .custom-column {
+            width: 10%;
+        }
+        .quick-access-create {
+            height: 180px;
+            width: 120px;
+            background-color: blue;
+            display: inline-block;
+            border-radius: 14px;
+            border: 1px solid blue;
+            position: relative;
+            .create-text {
+                bottom: 0px;
+                position: absolute;
+                color: white;
+                padding: 20px 15px;
+                font-weight: 600;
+                .speed-icon {
+                    display: block;
+                    font-weight: 600;
+                    font-size: 35px;
+                }
+            }
+        }
+        .vertical-ruler {
+            border: none;
+            border-left: 4px solid grey;
+            margin: 79px 10px;
+            height: 3vh;
+            width: 1px;
+        }
+        .quick-access-card {
+            display: inline-block;
+            height: 180px;
+            max-width: 220px;
+            border: 1px solid rgb(221, 205, 205);
+            .card-image {
+                height: 130px;
+                width: 100%;
+            }
+            .card-data {
+                display: flex;
+                padding-top: 3px;
+                .data-image{
+                    display: inline-block;
+                    margin-top: 5px;
+                    margin-left: 2px;
+                    height: 15%;
+                    width: 15%;
+                    border-radius: 50%;
+                    padding: auto 5px;
+                }
+                .data-title {
+                    font-size: small;
+                    display: inline-block;
+                    color: black;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 80%;
+                    max-width: 160px;
+                    padding-top: 1px;
+                    padding-left: 5px;
+                    .data-heading {
+                        font-weight: 600;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+.col-1half {
+    @include make-col-ready();
+  
+    @include media-breakpoint-up(sm) {
+      @include make-col(3);
+    }
+
+    @include media-breakpoint-up(md) {
+        @include make-col(3);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(1.5);
+      }
+}
+
+.col-one {
+    @include make-col-ready();
+  
+    @include media-breakpoint-up(sm) {
+      @include make-col(2);
+    }
+
+    @include media-breakpoint-up(sm) {
+        @include make-col(2);
+      }
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(1);
+    }
+}

@@ -1,0 +1,41 @@
+.main-pane {
+    max-width: 60px;
+    height: 96%;
+    // max-height: 94vh;
+    margin: 25px 15px;
+    padding: 20px 12px;
+    position: relative;
+    .icon-image {
+        margin: 4px auto;
+        border-radius: 50%;
+    }
+    .search-span {
+        margin: 40px 5px;
+        text-align: center;
+        .search-icon {
+            font-size: large;
+        }
+    }
+    hr {
+        max-width: 30px;
+        margin: 30px auto;
+        justify-content: center;
+    }
+    .span-icon {
+        margin: 45px 5px;
+        text-align: center;
+        .icon-style {
+            font-size: 25px;
+            font-weight: 900;
+        }
+    }
+    .help-icon {
+        position: absolute;
+        text-align: center;
+        bottom: 20px;
+        left: 15px;
+        .help-style {
+            font-size: 25px;
+        }
+    }
+}

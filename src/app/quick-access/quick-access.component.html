@@ -1,0 +1,44 @@
+<div class="quick-access">
+  <div class="header">Quick Access</div>
+  <div class="quick-acces-content">
+    <div class="row">
+      <div class="col-one">
+        <div class="quick-access-create">
+          <div class="create-text">
+            <div class="speed-icon">
+              <i class="bi bi-speedometer2"></i>
+            </div>
+            Create Dashboard
+          </div>
+        </div>
+      </div>
+      <div class="col-one">
+        <div class="quick-access-create">
+          <div class="create-text">Open Data Studio</div>
+        </div>
+      </div>
+
+      <div class="vertical-ruler"></div>
+      <div class="col-1half" *ngFor="let start of quickStartList">
+        <div class="quick-access-card rounded shadow-sm">
+          <div class="card-image">
+            <img
+              class="card-image"
+              src="https://picsum.photos/seed/{{ start.id }}/300/230"
+              alt=""
+            />
+          </div>
+          <div class="card-data">
+                <img class="data-image" src="https://picsum.photos/seed/{{ start.id + 20}}/40/40" alt="">
+                <div class="data-title">
+                    <div class="data-heading">
+                        {{start.title}}
+                    </div>
+                      {{start.created_before}}
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

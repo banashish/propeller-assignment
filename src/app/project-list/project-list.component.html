@@ -1,0 +1,83 @@
+<div class="header mb-3">
+    <span class="search-box me-5">
+            <div class="input-group has-search mb-3">
+                <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search" aria-label="Recipient's username">
+                  <span class="input-group-append input-group-text"><i class="bi bi-search"></i></span>
+            </div>
+    </span>
+    <span class="me-5">
+        <select class="form-select select-input rounded" aria-label="Default select example">
+            <option class="option-class" selected>All dashboard</option>
+            <option class="option-class" value="1">All cards</option>
+        </select>
+    </span>
+    <span class="vertical-ruler ms-2 me-5 shadow-sm">
+    </span>
+    <span class="me-5 active">
+        All
+    </span>
+    <span class="me-5">
+        Created by me
+    </span>
+    <span class="me-5">
+        Shared with me
+    </span>
+</div>
+<div class="projects-list shadow">
+    <table class="table-body">
+    <thead>
+    <tr class="table-row">
+        <th class="name">
+            Name 
+            <span class="arrow-icon">
+                <i class="bi bi-chevron-compact-down"></i>
+            </span>
+        </th>
+        <th class="description">
+            Description
+        </th>
+        <th>
+            Created By
+            <span class="arrow-icon">
+                <i class="bi bi-chevron-compact-down"></i>
+            </span>
+        </th>
+        <th>
+            Created on
+            <span class="arrow-icon">
+                <i class="bi bi-chevron-compact-down"></i>
+            </span>
+        </th>
+        <th>
+            Updated on
+            <span class="arrow-icon">
+                <i class="bi bi-chevron-compact-down"></i>
+            </span>
+        </th>
+        <th>
+            Shared with
+        </th>
+        <th></th>
+    </tr>
+</thead>
+            
+        <tbody>
+            <tr *ngFor="let project of myProjects | search : searchQuery">
+                <td class="name"><a href="http://" class="user-name"><b>{{project.name}}</b></a></td>
+                <td class="description">{{project.description}}</td>
+                <td class="created-by">{{project.created_by}}</td>
+                <td class="created-on">{{project.created_on | date:'dd, MMM YY'}}</td>
+                <td class="updated-on">{{project.updated_on | date:'dd, MMM YY'}}</td>
+                <td class="user-image-box">
+                        <span *ngFor="let user of project.shared_with.slice(0,max(project.shared_with.length))">
+                            <img class="user-image" src="https://picsum.photos/seed/{{user}}/100/100" alt="">
+                        </span>
+                    <span class="user-image-text" *ngIf="project.shared_with.length - 3 > 0">
+                        +{{project.shared_with.length - 3}}
+                    </span>
+                </td>
+                <td class="three-dots"><i class="bi bi-three-dots-vertical"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

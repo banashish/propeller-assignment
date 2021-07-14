@@ -1,0 +1,118 @@
+.header {
+    margin: 10px 0px;
+    .search-box {
+        .has-search {
+            display: inline-flex;
+            width: 15%;
+        }
+    }
+    .select-input {
+        width: 11%;
+        display: inline;
+        .option-class {
+            border-radius: 1%;
+            height: 10px;
+            font-size: large;
+            padding: 4px;
+        }
+    }
+    .vertical-ruler {
+        border: 1px solid rgb(182, 173, 173);
+    }
+    .active {
+        color: blue;
+    }
+    
+}
+.projects-list {
+    height: 100%;
+    padding: 35px;
+    border-radius: 1%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    .table-body {
+        width: 100%;
+        display: block;
+        max-height: 45vh;
+        max-width: 100%;
+        overflow-y: scroll;
+        border-collapse:collapse;
+        table-layout: fixed;
+        tr {
+            border-bottom: 1px solid rgb(189, 184, 184);
+            .name {
+                width: 15%;
+            }
+            .description {
+                max-width: 500px;
+                width: 30%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .created-by {
+                width: 20%;
+            }
+            .created-on {
+                width: 10%;
+            }
+            .updated-on{
+                width: 10%;
+            }
+            .user-image-box {
+                width: 20%;
+            }
+            td{
+                padding: 10px;
+                .user-name {
+                    text-decoration: none;
+                }
+                .user-image {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    position: relative;
+                    left: -10px;
+                }
+                .user-image-text {
+                    position: relative;
+                }
+            }
+            th {
+                padding: 12px;
+                text-align: left;
+                position: relative;
+                .arrow-icon {
+                    margin-top: 3px;
+                    margin-left: 3px;
+                    position: absolute;
+                    .bi::before {
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+        tr:last-child {
+            border-bottom: 0px;
+        }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    min-height: 0px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: blue;
+  }
+
+  td:empty::after{
+    content: "\00a0";
+  }
